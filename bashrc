@@ -34,4 +34,6 @@ then
     git config user.name "Laurence Billingham"
     git config user.email "laurence@bgs.ac.uk"
     git config color.ui "auto"
+    git config core.editor "vim"
+    git config help.autocorrect "5"
 fi
