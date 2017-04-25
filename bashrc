@@ -37,3 +37,18 @@ then
     git config core.editor "vim"
     git config help.autocorrect "5"
 fi
+
+# for python virtual environments
+export WORKON_HOME=~/virtualenvs/
+source virtualenvwrapper.sh
+
+#   activate the relavent virtualenv when we cd into a project dir
+PROMPT_COMMAND='prompt'
+
+function prompt()
+{
+    if [ "$PWD" != "$MYOLDPWD" ]; then
+        MYOLDPWD="$PWD"
+        test -e .venv && workon `cat .venv`
+    fi
+}
