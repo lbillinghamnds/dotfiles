@@ -1,0 +1,14 @@
+[user]
+	name = Laurence Billingham
+	email = laurence.billingham@mercurytide.co.uk
+[core]
+	editor = vim
+	excludesfile = /home/laurence/.gitignore_global
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[help]
+	autocorrect = 5
