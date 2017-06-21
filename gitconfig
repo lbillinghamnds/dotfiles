@@ -1,6 +1,6 @@
 [user]
 	name = Laurence Billingham
-	email = laurence.billingham@mercurytide.co.uk
+	email = laurence.billingham@example.com
 [core]
 	editor = vim
 	excludesfile = /home/laurence/.gitignore_global
