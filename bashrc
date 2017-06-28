@@ -26,13 +26,16 @@ unset env
 alias la='ls -a --color'
 alias lt='ls -lrt --color'
 alias ls='ls --color'
-alias matlab='/users/e_utils/linux/bin/matlab12 -nosplash'
+
+# history showing datetime of command
+alias histdate='HISTTIMEFORMAT="%Y-%m-%d %T " history'
 
 # to get git working
 if [ -d .git ]; 
 then
     git config user.name "Laurence Billingham"
-    git config user.email "laurence@bgs.ac.uk"
+    # change this
+    git config user.email "laurence.billingham@example.com"  
     git config color.ui "auto"
     git config core.editor "vim"
     git config help.autocorrect "5"
