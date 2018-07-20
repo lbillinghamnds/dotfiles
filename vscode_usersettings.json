@@ -1,0 +1,25 @@
+{
+    "terminal.integrated.fontFamily": "Roboto Mono for Powerline",
+    "python.venvPath": "/Users/laurencebillingham/.local/share/virtualenvs/",
+    "python.pythonPath": "/Users/laurencebillingham/.local/share/virtualenvs/utility-python/bin/python",
+    "files.trimTrailingWhitespace": true,
+    "python.unitTest.pyTestPath": "/Users/laurencebillingham/.local/share/virtualenvs/utility-python/bin/pytest",
+    "python.unitTest.pyTestEnabled": true,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    },
+    "extensions.ignoreRecommendations": false,
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Solarized Dark",
+    "gitlens.keymap": "alternate",
+    "gitlens.historyExplorer.enabled": true,
+}
