@@ -116,22 +116,21 @@ alias lt='ls -lrt'
 # grep
 alias egrep='egrep --color'
 
-# python
-export WORKON_HOME="$HOME/.local/share/virtualenvs"
-export PROJECT_HOME="$HOME/code"
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-source $HOME/Library/Python/3.6/bin/virtualenvwrapper.sh
+# misspellings
+alias gti='git'
+alias mkdire='mkdir'
 
-#   activate the relavent virtualenv when we cd into a project dir
-function _virtualenvwrapper_auto_activate()
-{
-    if [ "$PWD" != "$MYOLDPWD" ]; then
-        MYOLDPWD="$PWD"
-        test -e .venv && workon `cat .venv`
-    fi
-}
-prmptcmd() { _virtualenvwrapper_auto_activate }
-precmd_functions=(prmptcmd)
+# python
+## after moving from virtualenvwrapper
+##  to pyenv and pyenv-virtualenv
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
+alias workon="pyenv activate"
+workon utility-python
 
 # editors
 ## vscode
