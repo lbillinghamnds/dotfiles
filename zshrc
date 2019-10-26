@@ -132,6 +132,17 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 alias workon="pyenv activate"
 workon utility-python
 
+## auto upgrade pip after making an new virtualenv
+### vim "$(pyenv root)/pyenv.d/virtualenv/after.bash"
+### and paste
+### ```bash
+### upgrade_packages() {
+###   PYENV_VERSION=$VIRTUALENV_NAME pyenv-exec pip install --upgrade pip setuptools wheel
+### }
+### after_virtualenv 'upgrade_packages'
+### ```
+
+
 # editors
 ## vscode
 export PATH=$PATH:/usr/local/bin/code
