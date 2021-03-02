@@ -6,6 +6,7 @@
 	excludesfile = /home/laurence/.gitignore_global
 [alias]
 	co = checkout
+	comain = checkout main
 	comaster = checkout master
 	br = branch
 	brecent = "!git branch --sort=-committerdate | head -n 5"
@@ -13,6 +14,11 @@
 	st = status
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	show-tags-dates = log --tags --simplify-by-decoration --pretty='format:%ai %d'
+	pomain = pull origin main
 	pomaster = pull origin master
 [help]
 	autocorrect = 5
+[pull]
+	ff = only
+	# rebase = false
+	# rebase = true
