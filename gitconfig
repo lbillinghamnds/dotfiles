@@ -5,17 +5,18 @@
 	editor = vim
 	excludesfile = /home/laurence/.gitignore_global
 [alias]
+	br = branch
+	brecent = "!git branch --sort=-committerdate | head -n 5"
 	co = checkout
 	comain = checkout main
 	comaster = checkout master
-	br = branch
-	brecent = "!git branch --sort=-committerdate | head -n 5"
 	ci = commit
-	st = status
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	show-tags-dates = log --tags --simplify-by-decoration --pretty='format:%ai %d'
+	commits-since-last-tag = "!git lg $(git describe --tags --abbrev=0)..HEAD"
 	pomain = pull origin main
 	pomaster = pull origin master
+	show-tags-dates = log --tags --simplify-by-decoration --pretty='format:%ai %d'
+	st = status
 [help]
 	autocorrect = 5
 [pull]
